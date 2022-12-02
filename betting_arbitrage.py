@@ -102,7 +102,7 @@ class BettingOdds():
         combined_arbs = pd.concat(combined_arbs)
         return combined_arbs 
         
-odds = BettingOdds("Your api key goes here")
-all_ods,dec_odds, prob_odds  = odds.odds_for_sport("soccer_fifa_world_cup")
-arbs = odds.find_arbs(prob_odds)
-arbs.fillna("")
+# odds = BettingOdds("Your api key goes here")
+# all_ods,dec_odds, prob_odds  = odds.odds_for_sport("soccer_fifa_world_cup")
+# arbs = odds.find_arbs(prob_odds)
+# arbs.fillna("")
