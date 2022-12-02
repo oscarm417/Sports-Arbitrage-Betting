@@ -14,7 +14,6 @@ import dateutil.parser as dp
 class BettingOdds():
     def __init__(self,api_key):
         self.api_key = api_key
-        in_season_sports = requests.get("https://api.the-odds-api.com/v4/sports?apiKey="+self.api_key)
     def list_of_sports(self)->json:
         in_season_sports = requests.get("https://api.the-odds-api.com/v4/sports?apiKey="+self.api_key)
         in_season_sports = ast.literal_eval(str(in_season_sports.text).replace('\n','').replace(':false',':False').replace(':true',':True'))
