@@ -6,3 +6,9 @@ Finds all betting arbitrage opportunities across all major sports betting compan
 
 
 ![image](https://user-images.githubusercontent.com/65280357/205215848-d7e40cd4-cd6b-47dd-8242-f599c5ce334d.png)
+
+It outputs bets that add up to less than 100%. Most of these arbitrage bets will yield around .25 to 2% returns. 
+You can calculte youll profit by the following formula: Bet_amount/sum([odds from betting on all outcomes]). 
+
+The next step in the project is automatically creating the optimal bet size for each leg of the bet. Additionally, it will adjust the bet to maximize profits while minimizing odd size bets......
+
