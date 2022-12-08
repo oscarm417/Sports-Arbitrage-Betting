@@ -12,3 +12,7 @@ You can calculte youll profit by the following formula: Bet_amount/sum([odds fro
 
 The next step in the project is automatically creating the optimal bet size for each leg of the bet. Additionally, it will adjust the bet to maximize profits while minimizing odd size bets......
 
+Below is an image of the script showing how much to bet on each outcome: 
+![image](https://user-images.githubusercontent.com/65280357/206364116-7d5d5f04-8469-4570-8f13-e7c8fafd5301.png)
+
+
