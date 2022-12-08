@@ -100,6 +100,17 @@ class BettingOdds():
             return "No Arbitrages Found"
         combined_arbs = pd.concat(combined_arbs)
         return combined_arbs 
+    def calculate_each_leg(self,df:pd.DataFrame)->pd.DataFrame:
+        df['bet_size_%']= df.sum(axis = 1)
+        df = df.fillna("") 
+        arbitrages = df.index.levels[0]
+        all_bets = []
+        for arb in arbitrages:
+            temp_df = df.loc[arb]
+            edge = temp_df.sum(axis =1).sum()
+            temp_df['bet_size_%'] = temp_df['bet_size_%'].apply(lambda x: round(x/edge,2))
+            all_bets.append(temp_df)
+        return pd.concat(all_bets)
         
 # odds = BettingOdds("Your api key goes here")
 # all_ods,dec_odds, prob_odds  = odds.odds_for_sport("soccer_fifa_world_cup")
